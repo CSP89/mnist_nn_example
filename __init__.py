@@ -157,11 +157,3 @@ for index, row in tqdm_gui(testData.iterrows(), total=testData[0].size):
 
 scorecardArray = numpy.asarray(scorecard)
 print("performance = ", '%.20f' % (scorecardArray.sum() / scorecardArray.size))
-
-# %%
-row = testData.iloc[9]
-inputs = (numpy.asfarray(row[1:]) / 255.0 * 0.99) + 0.01
-
-outputs = n.query(inputs)
-
-numpy.argmax(outputs)
